@@ -16,7 +16,7 @@
                 <time datetime="{{article.modified.isoformat()}}">{{article.locale_modified|escape}}</time>
             </div>
             {% endif %}
-            {% if SHOW_AUTHOR_IN_LISTINGS and article.authors %}
+            {% if SHOW_AUTHOR_IN_LISTINGS|default(True) and article.authors %}
             <div>
                 <strong>By:</strong>
                 {% for author in article.authors %}

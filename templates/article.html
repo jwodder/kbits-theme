@@ -46,7 +46,7 @@
                     <td><time datetime="{{article.modified.isoformat()}}">{{article.locale_modified|escape}}</time></td>
                 </tr>
                 {% endif %}
-                {% if SHOW_AUTHOR and article.authors %}
+                {% if SHOW_AUTHOR|default(True) and article.authors %}
                 <tr>
                     <th>Author{{'s' if article.authors|length > 1}}:</th>
                     <td>
