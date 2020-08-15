@@ -36,6 +36,8 @@ Features
   ``AUTHOR_URL`` to ``None`` or the empty string, then author names will not be
   hyperlinked.
 
+- MathJax can be automatically enabled on every page
+
 .. _autopages:
    https://github.com/getpelican/pelican-plugins/tree/master/autopages
 
@@ -82,6 +84,17 @@ kbits-theme recognizes the following theme settings:
 
 ``SHOW_AUTHOR_IN_LISTINGS = True``
    Whether to show articles' authors in article listings (``index.html`` etc.)
+
+``USE_MATHJAX = False``
+   Whether to enable MathJax on every page of the site
+
+``MATHJAX_SCRIPT = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"``
+   The MathJax script to load
+
+``MATHJAX_CONFIG = {}``
+   Configuration settings for MathJax.  Configuration is applied assuming
+   version 3 of MathJax is in use.  Only JSON-serializable values are supported
+   in ``MATHJAX_CONFIG``.
 
 
 Third-Party Assets

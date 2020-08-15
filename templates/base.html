@@ -9,8 +9,15 @@
     {% if FAVICON_URL %}
     <link rel="icon" href="{{resolve_url(FAVICON_URL)}}"{% if FAVICON_TYPE %} type="{{FAVICON_TYPE|escape}}"{% endif %}/>
     {% endif %}
+    {% if USE_MATHJAX %}
+    {% if MATHJAX_CONFIG %}
+    <script>
+    MathJax = {{MATHJAX_CONFIG|tojson(indent=4)}};
+    </script>
+    {% endif %}
     <script type="text/javascript" id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+        src="{{MATHJAX_SCRIPT|default("https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js")|escape}}"></script>
+    {% endif %}
     {% if FEED_ALL_ATOM %}
     <link href="{{FEED_DOMAIN|escape}}/{% if FEED_ALL_ATOM_URL %}{{FEED_ALL_ATOM_URL|escape}}{% else %}{{FEED_ALL_ATOM|escape}}{% endif %}" type="application/atom+xml" rel="alternate" title="{{SITENAME|escape}} Full Atom Feed" />
     {% endif %}
