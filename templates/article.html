@@ -77,6 +77,20 @@
                         {% endif %}
                     </td>
                 </tr>
+                {% for label, attr in (EXTRA_METADATA_FIELDS or []) %}
+                {% if article[attr] %}
+                <tr>
+                    <th>{{label|escape}}:</th>
+                    <td>
+                        {% if FORMATTED_FIELDS|map("lower")|select("eq", attr) %}
+                        {{article[attr]|safe}}
+                        {% else %}
+                        {{article[attr]|escape}}
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endif %}
+                {% endfor %}
                 {% if GITHUB_SOURCE_URL %}
                 <tr>
                     <th>Page Source:</th>

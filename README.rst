@@ -96,6 +96,21 @@ kbits-theme recognizes the following theme settings:
    version 3 of MathJax is in use.  Only JSON-serializable values are supported
    in ``MATHJAX_CONFIG``.
 
+``EXTRA_METADATA_FIELDS``
+   A list of (Field Name, Article Attribute) pairs specifying additional
+   metadata fields to list in articles' metadata tables.  The "Field Name" is
+   the text to label the field with in the table (minus the colon which will be
+   automatically appended), and the "Article Attribute" is the name of the
+   field as available as an attribute of an ``Article`` object (i.e., the name
+   of the field as written in your document metadata, but converted to
+   all-lowercase).  If a given field is empty or not set on an article, it is
+   not listed in that article's metadata table.
+
+   For example, if you include an "``:ORCID:``" field in the docinfo of your
+   articles, you can include ``("Author ORCID", "orcid")`` in
+   ``EXTRA_METADATA_FIELDS`` to cause the field to be listed in the metadata
+   table with a label of "Author ORCID:".
+
 
 Third-Party Assets
 ==================
