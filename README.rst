@@ -126,6 +126,10 @@ kbits-theme recognizes the following theme settings:
    table pointing to the article source file on GitHub.  Setting this value
    also requires setting ``PATH_IN_REPO``.
 
+``GITHUB_SOURCE_BRANCH = "master"``
+   The branch of the ``GITHUB_SOURCE_URL`` repository on which the site's
+   source is located.
+
 ``PATH_IN_REPO``
    The /-separated path to your content directory, relative to the root of your
    repository.  This will usually be equal to ``PATH``.  This needs to be set

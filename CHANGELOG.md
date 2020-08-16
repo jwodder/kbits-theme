@@ -14,6 +14,8 @@ v0.2.0 (in development)
   separate list of categories to the navigation pane
 - Added `EXTRA_MENUS` setting for adding arbitrary lists of links to the
   navigation pane
+- Added `GITHUB_SOURCE_BRANCH` setting for specifying the `GITHUB_SOURCE_URL`
+  branch
 
 v0.1.0 (2020-08-13)
 -------------------

@@ -99,7 +99,7 @@
                 {% if GITHUB_SOURCE_URL %}
                 <tr>
                     <th>Page Source:</th>
-                    <td><a href="{{GITHUB_SOURCE_URL|escape}}/blob/master/{{PATH_IN_REPO|escape}}/{{article.relative_source_path|escape}}">[link]</a></td>
+                    <td><a href="{{GITHUB_SOURCE_URL|escape}}/blob/{{GITHUB_SOURCE_BRANCH|default("master")|escape}}/{{PATH_IN_REPO|escape}}/{{article.relative_source_path|escape}}">[link]</a></td>
                 </tr>
                 {% endif %}
             </table>
