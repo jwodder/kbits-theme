@@ -8,10 +8,12 @@ v0.2.0 (in development)
   metadata tables
 - List translations in articles' metadata tables
 - Added `MENU_NAME` setting for setting the name of the main menu
-- Added `PAGES_MENU` and `PAGES_MENU_NAME` for adding a separate list of pages
-  to the navigation pane
-- Added `CATEGORIES_MENU` and `CATEGORIES_MENU_NAME` for adding a separate list
-  of categories to the navigation pane
+- Added `PAGES_MENU` and `PAGES_MENU_NAME` settings for adding a separate list
+  of pages to the navigation pane
+- Added `CATEGORIES_MENU` and `CATEGORIES_MENU_NAME` settings for adding a
+  separate list of categories to the navigation pane
+- Added `EXTRA_MENUS` setting for adding arbitrary lists of links to the
+  navigation pane
 
 v0.1.0 (2020-08-13)
 -------------------

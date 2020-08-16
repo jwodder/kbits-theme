@@ -15,9 +15,8 @@ Features
 - Links to articles' source on GitHub can optionally be added to metadata
   listings
 
-..
-   - You can add arbitrary lists of links to the navigation pane, not just
-     "Links" and "Social"
+- You can add arbitrary lists of links to the navigation pane, not just "Links"
+  and "Social"
 
 - There is CSS support for the Docutils/reStructuredText table classes
   "booktabs" and "borderless" as well as for centered and right-aligned tables
@@ -77,6 +76,43 @@ kbits-theme recognizes the following theme settings:
 ``CATEGORIES_MENU_NAME = "Categories"``
    The name to display above the categories menu (if there is one) on the
    navigation pane
+
+``EXTRA_MENUS``
+   A list of (Menu Name, Link List) pairs defining extra lists of links to add
+   to the navigation pane beneath all other menus.  Each "Link List" is a
+   sublist of (Link Name, Link URL) pairs.
+
+   If a given link URL is relative (does not begin with either ``http://`` or
+   ``https://``), then ``{{SITEURL}}/`` is prepended to it.  This allows you to
+   link to locations on your site without having to give the full URL.
+
+   For example, the following setting:
+
+   .. code:: python
+
+       EXTRA_MENUS = [
+           ('Social', [
+               ('My Twitter', 'https://twitter.com/…'),
+               ('My Mastodon', 'https://…'),
+               ('My GitHub', 'https://github.com/…'),
+           ]),
+           ('Favorite Tags', [
+               ('Python', 'tags/python.html'),
+               ('Pelican', 'tags/pelican.html'),
+           ]),
+       ]
+
+   causes the following to be added to the navigation pane on the left of the
+   page::
+
+        Social
+        * My Twitter
+        * My Mastodon
+        * My GitHub
+
+        Favorite Tags
+        * Python
+        * Pelican
 
 ``SITESUBTITLE``
    A subtitle to appear in the header

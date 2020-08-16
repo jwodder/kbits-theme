@@ -83,6 +83,14 @@
                         {% endfor %}
                     </ul>
                 {% endif %}
+                {% for menu_name, linklist in EXTRA_MENUS|default([]) %}
+                    <div class="menu-name">{{menu_name|escape}}</div>
+                    <ul>
+                        {% for title, link in linklist %}
+                            <li><a href="{{resolve_url(link)}}">{{title|escape}}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% endfor %}
             </nav>
             {% if FEED_ALL_ATOM or FEED_ALL_RSS %}
                 <div class="postfeeds">
