@@ -6,6 +6,7 @@ v0.2.0 (in development)
   configuring MathJax
 - Added `EXTRA_METADATA_FIELDS` setting for including extra fields in articles'
   metadata tables
+- List translations in articles' metadata tables
 
 v0.1.0 (2020-08-13)
 -------------------

@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 
+{% import 'translations.j2' as translations with context %}
+
 {% block html_lang %}{{article.lang|escape}}{% endblock %}
 
 {% block title %}{{SITENAME|escape}} — {{article.title|striptags|escape}}{% endblock %}
 
 {% block extra_head %}
-    {% import 'translations.j2' as translations with context %}
     {{translations.entry_hreflang(article)}}
     {% if article.summary %}
         <meta name="description" content="{{article.summary|striptags|escape}}"/>
@@ -31,8 +32,6 @@
                 <a href="{{SITEURL|escape}}/{{article.url|escape}}" rel="bookmark"
                     title="Permalink to {{article.title|striptags|escape}}">{{article.title|safe}}</a>
             </h1>
-            {% import 'translations.j2' as translations with context %}
-            {{translations.translations_for(article)}}
         </header>
         <footer>
             <table border="1">
@@ -77,6 +76,12 @@
                         {% endif %}
                     </td>
                 </tr>
+                {% if article.translations %}
+                <tr>
+                    <th>Translations:</th>
+                    <td>{{translations.translations_for(article)}}</td>
+                </tr>
+                {% endif %}
                 {% for label, attr in (EXTRA_METADATA_FIELDS or []) %}
                 {% if article[attr] %}
                 <tr>

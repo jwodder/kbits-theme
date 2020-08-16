@@ -1,8 +1,17 @@
 {% macro translations_for(article) %}
     {% if article.translations %}
-        Translations:
-        {% for translation in article.translations %}
-        <a href="{{SITEURL|escape}}/{{translation.url|escape}}" hreflang="{{translation.lang|escape}}">{{translation.lang|escape}}</a>
+        {% set translations = [] %}
+        {% for translation in [article] + article.translations %}
+            {% set lang = translation.lang or DEFAULT_LANG %}
+            {% set is_altlang = lang != DEFAULT_LANG %}
+            {% set is_active = lang == (article.lang or DEFAULT_LANG) %}
+            {% set linksrc %}
+                {{"[" if is_active}}<a href="{{SITEURL|escape}}/{{translation.url|escape}}" hreflang="{{lang|escape}}">{{lang|escape}}</a>{{"]" if is_active}}
+            {% endset %}
+            {% if translations.append((is_altlang, lang, linksrc)) %}{% endif %}
+        {% endfor %}
+        {% for _, _, linksrc in translations|sort %}
+        {{linksrc}}
         {% endfor %}
     {% endif %}
 {% endmacro %}

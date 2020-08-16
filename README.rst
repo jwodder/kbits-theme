@@ -8,14 +8,16 @@ markup.
 Features
 ========
 
-- Article metadata (posted date, last modified date, authors, category, tags)
-  is displayed in a nice table underneath the article title
+- Article metadata (posted date, last modified date, authors, category, tags,
+  translations, and any custom fields you specify) is displayed in a nice table
+  underneath the article title
 
 - Links to articles' source on GitHub can optionally be added to metadata
   listings
 
-- You can add arbitrary lists of links to the navigation pane, not just "Links"
-  and "Social"
+..
+   - You can add arbitrary lists of links to the navigation pane, not just
+     "Links" and "Social"
 
 - There is CSS support for the Docutils/reStructuredText table classes
   "booktabs" and "borderless" as well as for centered and right-aligned tables
