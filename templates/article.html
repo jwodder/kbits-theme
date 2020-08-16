@@ -87,7 +87,7 @@
                 <tr>
                     <th>{{label|escape}}:</th>
                     <td>
-                        {% if FORMATTED_FIELDS|map("lower")|select("eq", attr) %}
+                        {% if FORMATTED_FIELDS|map("lower")|select("eq", attr)|list %}
                         {{article[attr]|safe}}
                         {% else %}
                         {{article[attr]|escape}}
