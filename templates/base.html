@@ -62,11 +62,27 @@
                     {% endfor %}
                 {% endif %}
                 {% if DISPLAY_CATEGORIES_ON_MENU %}
-                    {% for cat, null in categories %}
+                    {% for cat, _ in categories %}
                     <li><a href="{{SITEURL|escape}}/{{cat.url|escape}}">{{cat|escape}}</a></li>
                     {% endfor %}
                 {% endif %}
                 </ul>
+                {% if PAGES_MENU and pages %}
+                    <div class="menu-name">{{PAGES_MENU_NAME|default("Pages")|escape}}</div>
+                    <ul>
+                        {% for p in pages %}
+                            <li><a href="{{SITEURL|escape}}/{{p.url|escape}}">{{p.title|safe}}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                {% if CATEGORIES_MENU and categories %}
+                    <div class="menu-name">{{CATEGORIES_MENU_NAME|default("Categories")|escape}}</div>
+                    <ul>
+                        {% for cat, _ in categories %}
+                        <li><a href="{{SITEURL|escape}}/{{cat.url|escape}}">{{cat|escape}}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
             </nav>
             {% if FEED_ALL_ATOM or FEED_ALL_RSS %}
                 <div class="postfeeds">

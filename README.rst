@@ -60,6 +60,24 @@ kbits-theme recognizes the following theme settings:
    ``{{SITEURL}}/`` is prepended to it.  This allows you to link to locations
    on your site without having to give the full URL.
 
+``PAGES_MENU = False``
+   If true, pages will be given their own menu in the navigation pane,
+   after the main menu but before the categories menu and any menus defined
+   with ``EXTRA_MENUS``.
+
+``PAGES_MENU_NAME = "Pages"``
+   The name to display above the pages menu (if there is one) on the
+   navigation pane
+
+``CATEGORIES_MENU = False``
+   If true, categories will be given their own menu in the navigation pane,
+   after the main menu and pages menu but before any menus defined with
+   ``EXTRA_MENUS``.
+
+``CATEGORIES_MENU_NAME = "Categories"``
+   The name to display above the categories menu (if there is one) on the
+   navigation pane
+
 ``SITESUBTITLE``
    A subtitle to appear in the header
 
