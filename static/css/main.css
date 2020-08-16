@@ -93,6 +93,10 @@ div.subfeeds {
     width: 76%;
 }
 
+.summary {
+    margin-top: 1em;
+}
+
 #pagination {
     text-align: center;
     margin-top: 1em;
