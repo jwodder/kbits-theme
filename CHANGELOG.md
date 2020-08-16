@@ -7,6 +7,7 @@ v0.2.0 (in development)
 - Added `EXTRA_METADATA_FIELDS` setting for including extra fields in articles'
   metadata tables
 - List translations in articles' metadata tables
+- Added `MENU_NAME` setting for setting the name of the main menu
 
 v0.1.0 (2020-08-13)
 -------------------

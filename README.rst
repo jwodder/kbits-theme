@@ -49,6 +49,10 @@ Theme Settings
 
 kbits-theme recognizes the following theme settings:
 
+``MENU_NAME``
+   The name to display above the main menu on the navigation pane.  Defaults to
+   no name.
+
 ``MENUITEMS``
    A list of (Title, URL) pairs for additional menu items to appear at the
    beginning of the main menu in the navigation pane.  If a given URL is

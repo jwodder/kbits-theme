@@ -49,6 +49,9 @@
     <div class="mainrow">
         <div id="navbar">
             <nav>
+                {% if MENU_NAME %}
+                <div class="menu-name">{{MENU_NAME|escape}}</div>
+                {% endif %}
                 <ul>
                 {% for title, link in MENUITEMS %}
                     <li><a href="{{resolve_url(link)}}">{{title|escape}}</a></li>
