@@ -122,7 +122,8 @@ kbits-theme recognizes the following theme settings:
 
 ``GITHUB_SOURCE_URL``
    If your site's repository is hosted on GitHub, setting this variable to the
-   repository's URL will add a "Page Source" entry to each article's metadata
+   repository's URL (in the form ``"https://github.com/$OWNER/$REPO"``, without
+   trailing ``.git``) will add a "Page Source" entry to each article's metadata
    table pointing to the article source file on GitHub.  Setting this value
    also requires setting ``PATH_IN_REPO``.
 
@@ -131,9 +132,9 @@ kbits-theme recognizes the following theme settings:
    source is located.
 
 ``PATH_IN_REPO``
-   The /-separated path to your content directory, relative to the root of your
-   repository.  This will usually be equal to ``PATH``.  This needs to be set
-   whenever ``GITHUB_SOURCE_URL`` is set.
+   The ``/``-separated path to your content directory, relative to the root of
+   your repository.  This will usually be equal to ``PATH``.  This needs to be
+   set whenever ``GITHUB_SOURCE_URL`` is set.
 
 ``FAVICON_URL``
    A URL pointing to an image to use as the site's favicon.  If the URL is
