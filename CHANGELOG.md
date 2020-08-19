@@ -16,6 +16,8 @@ v0.2.0 (in development)
   navigation pane
 - Added `GITHUB_SOURCE_BRANCH` setting for specifying the `GITHUB_SOURCE_URL`
   branch
+- Changed authors.html header to "Article Authors" for consistency with
+  categories.html and tags.html
 
 v0.1.0 (2020-08-13)
 -------------------
