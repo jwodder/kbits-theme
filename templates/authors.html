@@ -3,7 +3,7 @@
 {% block title %}{{SITENAME|escape}} — Authors{% endblock %}
 
 {% block content %}
-    <h1>{{SITENAME|escape}} Authors</h1>
+    <h1>Article Authors</h1>
     <ul>
     {% for author, articles in authors|sort %}
         <li><a href="{{SITEURL|escape}}/{{author.url|escape}}">{{author|escape}}</a> ({{articles|count}})</li>
