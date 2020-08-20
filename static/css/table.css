@@ -37,4 +37,5 @@ table tbody tr:nth-child(2n) {
 
 table:not(.footnote):not(.citation) {
     border-style: solid;
+    border-width: 1px;
 }
