@@ -4,6 +4,9 @@ repository so that it can be reused by others.  The theme is a mixture of
 similar styles from various sources, mostly the styles GitHub uses to render
 markup.
 
+A demo of the theme in action, designed to show off as many features & styles
+as possible, can be found at <https://jwodder.github.io/kbits-theme-demo/>.
+
 
 Features
 ========
