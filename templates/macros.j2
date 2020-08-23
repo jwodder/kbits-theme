@@ -12,7 +12,7 @@
             <strong>Posted:</strong> <time datetime="{{article.date.isoformat()}}">{{article.locale_date|escape}}</time>
             {% if article.modified %}
             <div>
-                <strong>Updated:</strong>
+                <strong>Modified:</strong>
                 <time datetime="{{article.modified.isoformat()}}">{{article.locale_modified|escape}}</time>
             </div>
             {% endif %}

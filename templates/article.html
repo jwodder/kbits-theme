@@ -41,7 +41,7 @@
                 </tr>
                 {% if article.modified %}
                 <tr>
-                    <th>Last Updated:</th>
+                    <th>Modified:</th>
                     <td><time datetime="{{article.modified.isoformat()}}">{{article.locale_modified|escape}}</time></td>
                 </tr>
                 {% endif %}
