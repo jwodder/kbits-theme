@@ -19,6 +19,7 @@ v0.2.0 (in development)
 - Changed authors.html header to "Article Authors" for consistency with
   categories.html and tags.html
 - Adjust styles for "code-block" directives and Markdown tables
+- All `<tt>` and `<pre>` tags now have a grey background
 
 v0.1.0 (2020-08-13)
 -------------------
