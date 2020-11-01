@@ -35,7 +35,7 @@
 </head>
 
 <body>
-    <div id="topbar">
+    <div id="kbits-theme-topbar">
         <header>
             <span class="sitename">
                 <a href="{{SITEURL|escape}}/">{{SITENAME|escape}}</a>
@@ -47,7 +47,7 @@
     </div>
 
     <div class="mainrow">
-        <div id="navbar">
+        <div id="kbits-theme-navbar">
             <nav>
                 {% if MENU_NAME %}
                 <div class="menu-name">{{MENU_NAME|escape}}</div>
@@ -120,14 +120,14 @@
                 </div>
             {% endif %}
         </div>
-        <div id="content">
+        <div id="kbits-theme-content">
             {% block content %}
             {% endblock %}
         </div>
     </div>
 
     {% if FOOTER_HTML %}
-        <footer id="footer">{{FOOTER_HTML|safe}}</footer>
+        <footer id="kbits-theme-footer">{{FOOTER_HTML|safe}}</footer>
     {% endif %}
 </body>
 </html>

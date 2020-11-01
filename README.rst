@@ -22,9 +22,10 @@ Features
   and "Social"
 
 - There is CSS support for the Docutils/reStructuredText table classes
-  "booktabs" and "borderless" as well as for centered and right-aligned tables
+  "booktabs" and "borderless" as well as for left-aligned, centered, and
+  right-aligned tables
 
-- Colorful reStructuredText admonitions
+- Colorful reStructuredText admonitions, topics, and sidebars
 
 - Strings are HTML-escaped where necessary, so you can safely put angle
   brackets in your article titles, categories, and tags
