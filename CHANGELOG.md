@@ -20,6 +20,7 @@ v0.2.0 (in development)
   categories.html and tags.html
 - Adjust styles for "code-block" directives and Markdown tables
 - All `<tt>` and `<pre>` tags now have a grey background
+- Applied reStructuredText topic & TOC styles to Markdown TOCs
 
 v0.1.0 (2020-08-13)
 -------------------
