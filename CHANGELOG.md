@@ -21,6 +21,7 @@ v0.2.0 (in development)
 - Adjust styles for "code-block" directives and Markdown tables
 - All `<tt>` and `<pre>` tags now have a grey background
 - Applied reStructuredText topic & TOC styles to Markdown TOCs
+- Field names of non-docinfo field lists are now aligned to the left
 
 v0.1.0 (2020-08-13)
 -------------------
